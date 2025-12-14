@@ -1,0 +1,19 @@
+{
+  "name": "simple-dom-maker",
+  "version": "1.0.0",
+  "description": "Makes creating and use of simple dom elements inside JS easy.",
+  "main": "index.js",
+  "files": ["./dist"],
+  "scripts": {
+    "start": "tsc --watch",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "Soumyajit Samanta",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.9.3"
+  }
+}
