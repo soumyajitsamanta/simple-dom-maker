@@ -3,7 +3,6 @@ export type IfNodeUpdater = (condition: boolean) => void;
 /**
  * Create a node which conditionally selects from trueNode and falseNode based
  * on the condition and then displays the node.
- *
  * @param trueNode The node to show when condition true.
  * @param falseNode The node to show when condition false.
  * @param initialCondition The initial condition value.
