@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements Test</title>
+</head>
+
+<body>
+    <div id="appRoot"></div>
+    <script type="module">
+        import { a, div } from './node_modules/simple-dom-maker/dist/Elements.js'
+        import { ifNode } from './node_modules/simple-dom-maker/dist/CompositeElements.js'
+
+        const doc = document.querySelector("#appRoot");
+        if (doc != null) {
+            doc.append(
+                div({ className: 'Hello classsesss' },
+                div(),
+                a(),
+                div({}, "Empty div with text. asdasdas. Phew no one looked"),
+                ifNode(div({}, "First node"), div({}, "Second Node"), false, (fn) => {
+                        let condition = true;
+                        let ifNodeUpdater = fn;
+                        setInterval(()=>{
+                            condition = !condition;
+                            ifNodeUpdater(condition)
+                        }, 1000)
+                    })
+                )
+            );
+        }
+    </script>
+</body>
+
+</html>

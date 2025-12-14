@@ -1,0 +1,20 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "Soumyajit Samanta",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "simple-dom-maker": "file:.."
+  }
+}
