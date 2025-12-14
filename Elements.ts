@@ -1,6 +1,14 @@
 type ChildrenType = HTMLElement | string ;
 type HtmlElementTagNames = keyof HTMLElementTagNameMap;
 
+/**
+ * The main function to create element of all types.
+ *
+ * @param elname Name of element to create via createElement.
+ * @param attributes Attributes to apply to the element.
+ * @param children The children of the element.
+ * @returns New Element of the type, with attributes and children attached.
+ */
 export function createElement<K extends HtmlElementTagNames>(
     elname: K,
     attributes?:Partial<HTMLElementTagNameMap[K]>,

@@ -2,9 +2,34 @@
 
 Makes creating and use of simple dom elements inside JS easy.
 
+It is suitable when you want to write html elements in your javascript or
+typescript souce but do not want extra build step to be used. Then you get
+to happily continue project without having to add build step for a simple
+convenient functions.
+
 # Usage:
 
 ## How to use:
+
+All elements are created with functions which are of the following format at minimum:
+
+```js
+/**
+ * attributes: {} The attributes to add to element.
+ * children: The list of child elements of this element.
+ */
+function div(attributes?:{}, ...children: (HTMLElement|string)[]);
+// similarly for other elements.
+```
+
+## Elements supported:
+
+Builtin Elements:
+- a
+- div
+
+Additional Elements:
+- ifNode: Selects and displays node based on condition and update the condition using the updater function.
 
 ### To use in browser directly:
 
@@ -20,6 +45,11 @@ To use in browser you need to import as module file and invoke functions.
     document.body.append(div())
     document.body.append(div({}, "Empty div element"))
 </script>
+
+<!-- Creates -->
+ <body>
+    <div></div>
+    <div>Empty div element</div>
 ```
 
 ### To use in your project:
@@ -41,10 +71,6 @@ document.body.append(
 
 Also see the examples in [test](test/index.html) directory.
 
-## Why to use?
-It is suitable when you want to write html elements in your javascript or typescript souce but do not want extra build step to be used.
-Then you get to happily continue project without having to add build step for a simple convenient functions.
-
 # File Structure
 
 ## Folders:
@@ -55,10 +81,3 @@ dist: Contains the js compiled version of the typescript source and types files 
 - dist/Elements.js: The file containing the element generating functions.
 
 - dist/CompositeElements.js: The file containing elements which are not present in standard dom or are composition of other elements.
-
-# Elements supported:
-
-| Function | Functionality        |
-|----------|----------------------|
-| a        | Standard element a   |
-| div      | Standard element div |

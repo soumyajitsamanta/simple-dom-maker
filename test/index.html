@@ -18,7 +18,7 @@
             doc.append(
                 div({ className: 'Hello classsesss' },
                 div(),
-                a(),
+                a({href: "somelink"}, "Linked from here."),
                 div({}, "Empty div with text. asdasdas. Phew no one looked"),
                 ifNode(div({}, "First node"), div({}, "Second Node"), false, (fn) => {
                         let condition = true;
