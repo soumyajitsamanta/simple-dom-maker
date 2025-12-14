@@ -18,7 +18,7 @@ All elements are created with functions which are of the following format at min
  * attributes: {} The attributes to add to element.
  * children: The list of child elements of this element.
  */
-function div(attributes?:{}, ...children: (HTMLElement|string)[]);
+function div(attributes?:{}, ...children: (HTMLElement|string)[],...);
 // similarly for other elements.
 ```
 
