@@ -51,8 +51,10 @@ Then you get to happily continue project without having to add build step for a 
 dist: Contains the js compiled version of the typescript source and types files ready for deployment.
 
 ## Files:
-dist/Elements.js: The file containing the element generating functions.
-dist/CompositeElements.js: The file containing elements which are not present in standard dom or are composition of other elements.
+
+- dist/Elements.js: The file containing the element generating functions.
+
+- dist/CompositeElements.js: The file containing elements which are not present in standard dom or are composition of other elements.
 
 # Elements supported:
 
