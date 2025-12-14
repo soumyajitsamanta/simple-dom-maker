@@ -14,7 +14,7 @@ export function createElement<K extends HtmlElementTagNames>(
     attributes?:Partial<HTMLElementTagNameMap[K]>,
     ...children: ChildrenType[]
 ):HTMLElementTagNameMap[K] {
-    let element = document.createElement(elname);
+    const element = document.createElement(elname);
     applyAttributes(element, attributes);
     children
         .filter(a => a != null)
@@ -24,8 +24,8 @@ export function createElement<K extends HtmlElementTagNames>(
 
 function applyAttributes<K extends HtmlElementTagNames>(element: HTMLElementTagNameMap[K], attributes?:Partial<HTMLElementTagNameMap[K]>){
     if(attributes != null){
-        for(let attribute in attributes){
-            let value = attributes[attribute];
+        for(const attribute in attributes){
+            const value = attributes[attribute];
 
             if(value == null){
                 return ;
